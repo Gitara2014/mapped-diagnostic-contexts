@@ -3,7 +3,13 @@ Java Logging with Mapped Diagnostic Context (MDC)
 
 RUN: 
 
-Start like normal SpringBoot application. 
+MDC is a Spring Boot application built using Maven.
+You can build a jar file and run it from the command line
+
+`git clone https://github.com/Gitara2014/mapped-diagnostic-contexts.git
+cd cd mapped-diagnostic-contexts
+mvn clean package
+java -jar target/*.jar`
 
 TEST: 
 
