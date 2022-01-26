@@ -1,6 +1,10 @@
 # mapped-diagnostic-contexts
 Java Logging with Mapped Diagnostic Context (MDC)
 
+Server needs to deal with multiple client request simultaneously each logging at the same time. 
+How to group log messages per single client and easily understand unreadable log?
+Log requests are uniquely stamped per client with 'requestId'.
+
 RUN: 
 
 MDC is a Spring Boot application built using Maven.
@@ -35,6 +39,10 @@ http://localhost:8080/employee?id=45
 26-01-2022 00:41:22.214 [http-nio-8080-exec-1] INFO  com.bane.mdc.service.EmployeeService.getEmployeeInfo - Employee(id=null, name=Mark Smith, age=33) requestId=76ced8c5-87d6-49ec-91df-93837ef94297
 ```
 
-Log: 
+**Log:** 
 
 The 'requestId' is logged with each log message and grouped per Employee. 
+
+**Read more:**
+
+https://logback.qos.ch/manual/mdc.html
